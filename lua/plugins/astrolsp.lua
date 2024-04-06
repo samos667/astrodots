@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -40,7 +38,21 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      ---- Configuration Language
+      "marksman",    -- markdown ls
+      "jsonls",      -- json language server
+      "yamlls",      -- yaml language server
+      "taplo",       -- toml language server
+      ---- Backend
+      "lua_ls",      -- lua
+      "pyright",     -- python
+      "ruff_lsp",    -- extremely fast Python linter and code transformation
+      "nil_ls",      -- nix language server
+      ---- Operation & Cloud Nativautoindente
+      "bashls",      -- bash
+      "dockerls",    -- dockerfile
+      "jsonnet_ls",  -- jsonnet language server
+      "terraformls", -- terraform hcl
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
