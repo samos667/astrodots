@@ -32,11 +32,6 @@ return {
       },
       null_ls.builtins.formatting.nginx_beautifier, -- Nginx formatter
     }
-    config.sources = {
-      -- Set a formatter
-      -- null_ls.builtins.formatting.stylua,
-      -- null_ls.builtins.formatting.prettier,
-    }
     return config -- return final config table
   end,
 }
