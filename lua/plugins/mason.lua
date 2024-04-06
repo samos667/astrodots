@@ -1,40 +1,33 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- Customize Mason plugins
-
----@type LazySpec
 return {
-  -- use mason-lspconfig to configure LSP installations
+  -- Install lsp, formmatter and others via home manager instead of Mason.nvim
+  -- LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
-    -- overrides `require("mason-lspconfig").setup(...)`
+    -- mason is unusable on NixOS, disable it.
+    -- ensure_installed nothing
     opts = function(_, opts)
       opts.ensure_installed = nil
       opts.automatic_installation = false
     end,
   },
-  -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
+  -- Formatters/Linter installation
   {
     "jay-babu/mason-null-ls.nvim",
-    -- overrides `require("mason-null-ls").setup(...)`
+    -- mason is unusable on NixOS, disable it.
+    -- ensure_installed nothing
     opts = function(_, opts)
-      -- add more things to the ensure_installed table protecting against community packs modifying it
-      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
-        "prettier",
-        "stylua",
-        -- add more arguments for adding more null-ls sources
-      })
+      opts.ensure_installed = nil
+      opts.automatic_installation = false
     end,
   },
+  -- Debugger installation
   {
     "jay-babu/mason-nvim-dap.nvim",
-    -- overrides `require("mason-nvim-dap").setup(...)`
+    -- mason is unusable on NixOS, disable it.
+    -- ensure_installed nothing
     opts = function(_, opts)
-      -- add more things to the ensure_installed table protecting against community packs modifying it
-      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
-        "python",
-        -- add more arguments for adding more debuggers
-      })
+      opts.ensure_installed = nil
+      opts.automatic_installation = false
     end,
   },
 }
