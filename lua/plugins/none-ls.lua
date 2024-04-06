@@ -12,7 +12,7 @@ return {
       null_ls.builtins.code_actions.gitsigns,
       -- common refactoring actions based off the Refactoring book by Martin Fowler
       null_ls.builtins.code_actions.refactoring,
-      null_ls.builtins.code_actions.shellcheck,
+      -- null_ls.builtins.code_actions.shellcheck,
       null_ls.builtins.code_actions.proselint,      -- English prose linter
       null_ls.builtins.code_actions.statix,         -- Lints and suggestions for Nix.
       -- Diagnostic
