@@ -124,14 +124,6 @@ return {
   },
   -- full signature help, docs and completion for the nvim lua API.
   { "folke/neodev.nvim", opts = {} },
-  {
-    "0x00-ketsu/autosave.nvim",
-    -- lazy-loading on events
-    event = { "InsertLeave", "TextChanged" },
-    opts = function(_, opts)
-      opts.prompt_style = "stdout" -- notify or stdout
-    end,
-  },
   -- automatically highlighting other uses of the word under the cursor using either LSP, Tree-sitter, or regex matching.
   { "RRethy/vim-illuminate", config = function() end },
   -- implementation/definition preview
