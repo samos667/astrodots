@@ -18,11 +18,12 @@ return {
       -- Diagnostic
       null_ls.builtins.diagnostics.actionlint,      -- GitHub Actions workflow syntax checking
       null_ls.builtins.diagnostics.deadnix,         -- Scan Nix files for dead code.
+      null_ls.builtins.diagnostics.hadolint,        -- Dockerfile linter
+      null_ls.builtins.diagnostics.yamllint,        -- A linter for YAML files
+      null_ls.builtins.diagnostics.pylint,          -- Static code analyser for Python
       -- formatting
       null_ls.builtins.formatting.prettier,         -- js/ts/vue/css/html/json/... formatter
-      null_ls.builtins.diagnostics.hadolint,        -- Dockerfile linter
       null_ls.builtins.formatting.black,            -- Python formatter
-      null_ls.builtins.formatting.ruff,             -- extremely fast Python linter
       null_ls.builtins.formatting.shfmt,            -- Shell formatter
       null_ls.builtins.formatting.terraform_fmt,    -- Terraform formatter
       null_ls.builtins.formatting.stylua,           -- Lua formatter
@@ -31,6 +32,7 @@ return {
         extra_args = { "--dialect", "postgres" },   -- change to your dialect
       },
       null_ls.builtins.formatting.nginx_beautifier, -- Nginx formatter
+
     }
     return config -- return final config table
   end,
